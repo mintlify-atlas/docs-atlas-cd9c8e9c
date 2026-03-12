@@ -1,122 +1,86 @@
 {
   "$schema": "https://mintlify.com/docs.json",
-  "theme": "mint",
-  "name": "Mint Starter Kit",
+  "name": "FIA 2026 F1 Regulations",
+  "theme": "linden",
   "colors": {
-    "primary": "#16A34A",
-    "light": "#07C983",
-    "dark": "#15803D"
-  },
-  "favicon": "/favicon.svg",
-  "navigation": {
-    "tabs": [
-      {
-        "tab": "Guides",
-        "groups": [
-          {
-            "group": "Getting started",
-            "pages": [
-              "index",
-              "quickstart",
-              "development"
-            ]
-          },
-          {
-            "group": "Customization",
-            "pages": [
-              "essentials/settings",
-              "essentials/navigation"
-            ]
-          },
-          {
-            "group": "Writing content",
-            "pages": [
-              "essentials/markdown",
-              "essentials/code",
-              "essentials/images",
-              "essentials/reusable-snippets"
-            ]
-          },
-          {
-            "group": "AI tools",
-            "pages": [
-              "ai-tools/cursor",
-              "ai-tools/claude-code",
-              "ai-tools/windsurf"
-            ]
-          }
-        ]
-      },
-      {
-        "tab": "API reference",
-        "groups": [
-          {
-            "group": "API documentation",
-            "pages": [
-              "api-reference/introduction"
-            ]
-          },
-          {
-            "group": "Endpoint examples",
-            "pages": [
-              "api-reference/endpoint/get",
-              "api-reference/endpoint/create",
-              "api-reference/endpoint/delete",
-              "api-reference/endpoint/webhook"
-            ]
-          }
-        ]
-      }
-    ],
-    "global": {
-      "anchors": [
-        {
-          "anchor": "Documentation",
-          "href": "https://mintlify.com/docs",
-          "icon": "book-open-cover"
-        },
-        {
-          "anchor": "Blog",
-          "href": "https://mintlify.com/blog",
-          "icon": "newspaper"
-        }
-      ]
-    }
-  },
-  "logo": {
-    "light": "/logo/light.svg",
-    "dark": "/logo/dark.svg"
+    "primary": "#e10600",
+    "light": "#ff1e00",
+    "dark": "#b00500"
   },
   "navbar": {
-    "links": [
-      {
-        "label": "Support",
-        "href": "mailto:hi@mintlify.com"
-      }
-    ],
     "primary": {
-      "type": "button",
-      "label": "Dashboard",
-      "href": "https://dashboard.mintlify.com"
+      "type": "github",
+      "href": "https://github.com/TracingInsights/26Regs"
     }
-  },
-  "contextual": {
-    "options": [
-     "copy",
-     "view",
-     "chatgpt",
-     "claude",
-     "perplexity",
-     "mcp",
-     "cursor",
-     "vscode"
-   ]
   },
   "footer": {
     "socials": {
-      "x": "https://x.com/mintlify",
-      "github": "https://github.com/mintlify",
-      "linkedin": "https://linkedin.com/company/mintlify"
+      "github": "https://github.com/TracingInsights/26Regs"
     }
+  },
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": [
+          "introduction",
+          "whats-new-2026",
+          "understanding-regulations"
+        ]
+      },
+      {
+        "group": "General Provisions",
+        "pages": [
+          "general/overview",
+          "general/definitions",
+          "general/governance"
+        ]
+      },
+      {
+        "group": "Sporting Regulations",
+        "pages": [
+          "sporting/overview",
+          "sporting/championship-events",
+          "sporting/race-procedures",
+          "sporting/penalties-protests"
+        ]
+      },
+      {
+        "group": "Technical Regulations",
+        "pages": [
+          "technical/overview",
+          "technical/chassis-bodywork",
+          "technical/power-unit",
+          "technical/fuel-systems",
+          "technical/electronics",
+          "technical/safety"
+        ]
+      },
+      {
+        "group": "Financial Regulations",
+        "pages": [
+          "financial/overview",
+          "financial/cost-cap-teams",
+          "financial/cost-cap-pu-manufacturers",
+          "financial/reporting-compliance"
+        ]
+      },
+      {
+        "group": "Operational Regulations",
+        "pages": [
+          "operational/overview",
+          "operational/logistics",
+          "operational/media-commercial"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "reference/quick-reference",
+          "reference/changelog",
+          "reference/faq"
+        ]
+      }
+    ]
   }
 }

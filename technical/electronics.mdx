@@ -1,0 +1,657 @@
+---
+title: "Electronics"
+description: "Electronic control units, sensors, data systems, telemetry, and driver controls in 2026 Formula 1 cars"
+---
+
+# Electronics
+
+Formula 1's electronic systems are tightly regulated to ensure fair competition while enabling sophisticated power unit control, safety monitoring, and data acquisition. The 2026 regulations maintain standardized control electronics while adapting to the new power unit architecture.
+
+## Standardized Electronic Systems
+
+<Info>
+**FIA Standard Electronics:**
+To control costs and ensure competitive parity, many electronic components are FIA-standardized and supplied by single-source manufacturers.
+</Info>
+
+<CardGroup cols={2}>
+  <Card title="ECU" icon="microchip">
+    McLaren Electronic Systems - Standard Electronic Control Unit for all teams
+  </Card>
+  <Card title="Energy Store" icon="battery-full">
+    Standardized battery management system and control architecture
+  </Card>
+  <Card title="FIA Sensors" icon="sensor">
+    Mandatory sensors for monitoring compliance and safety
+  </Card>
+  <Card title="Data Logger" icon="database">
+    Standard accident data recorder accessible to FIA
+  </Card>
+</CardGroup>
+
+## Electronic Control Unit (ECU)
+
+### ECU Specifications
+
+<Accordion title="Standard ECU Details">
+  **McLaren Electronic Systems TAG-320B:**
+  - Processor: Dual-core ARM-based processor
+  - Memory: 8MB program memory, 1MB data logging
+  - Operating frequency: 200 MHz per core
+  - Inputs: 150+ sensor channels
+  - Outputs: 32+ actuator control channels
+  - CAN bus: Multiple networks for sensors and actuators
+  - Operating temperature: -40°C to +125°C
+  - Weight: Approximately 2.5kg
+</Accordion>
+
+<Warning>
+**Strict Regulations:**
+- ECU hardware cannot be modified by teams
+- Base software is standardized
+- Teams can only calibrate specific parameters
+- Any attempt to modify ECU hardware results in exclusion
+</Warning>
+
+### ECU Functions
+
+<Steps>
+  <Step title="Engine Management">
+    Controls fuel injection, ignition timing, throttle, variable valve timing
+  </Step>
+  <Step title="Hybrid System Control">
+    Manages MGU-K torque requests, energy recovery, and deployment strategies
+  </Step>
+  <Step title="Sensor Monitoring">
+    Processes data from 150+ sensors across the car
+  </Step>
+  <Step title="Driver Interface">
+    Communicates with steering wheel controls and displays
+  </Step>
+  <Step title="Telemetry">
+    Transmits real-time data to pit wall and FIA systems
+  </Step>
+  <Step title="Compliance Enforcement">
+    Enforces regulatory limits (fuel flow, power limits, energy deployment)
+  </Step>
+  <Step title="Safety Systems">
+    Monitors and activates safety systems (fire suppression, battery disconnect)
+  </Step>
+  <Step title="Data Logging">
+    Records all parameters for post-session analysis
+  </Step>
+</Steps>
+
+## Software Regulations
+
+### Standardized vs. Team Software
+
+<CardGroup cols={2}>
+  <Card title="Standardized Software" icon="lock">
+    FIA-supplied base software for core functions:
+    - Fuel flow limiting
+    - Power unit control architecture
+    - Safety system logic
+    - Telemetry protocols
+    - Data logging structure
+  </Card>
+  <Card title="Team Calibration" icon="sliders">
+    Teams can calibrate within limits:
+    - Engine maps (pre-defined strategies)
+    - Hybrid deployment strategies
+    - Throttle and brake pedal maps
+    - Sensor calibrations
+    - Driver switch functions
+  </Card>
+</CardGroup>
+
+<Warning>
+**Prohibited Software Functions:**
+- Traction control algorithms
+- Launch control systems
+- Automatic gear shifting optimization
+- Computer-controlled differential
+- Brake pressure modulation (ABS)
+- Active suspension control
+- Any form of driver aid beyond permitted systems
+</Warning>
+
+### Software Homologation
+
+<Steps>
+  <Step title="Source Code Submission">
+    Teams must submit all software source code to FIA
+  </Step>
+  <Step title="FIA Analysis">
+    Code analyzed for prohibited functions using automated tools
+  </Step>
+  <Step title="Approval">
+    Software approved for use if compliant
+  </Step>
+  <Step title="Random Checks">
+    FIA may extract and analyze software during events
+  </Step>
+</Steps>
+
+<Note>
+The FIA uses specialized analysis tools to detect hidden traction control, launch control, or other driver aid algorithms in team software.
+</Note>
+
+## FIA-Mandated Sensors
+
+### Compliance Monitoring Sensors
+
+These sensors are mandatory and FIA-specified:
+
+<Accordion title="Required FIA Sensors">
+  | Sensor | Location | Purpose |
+  |--------|----------|----------|
+  | Fuel flow meter | Fuel supply line | Enforce 100 kg/hour limit |
+  | Fuel pressure | Fuel rail | Monitor injection system |
+  | MGU-K torque | MGU-K shaft | Monitor electrical power |
+  | Battery current | ES terminals | Monitor energy deployment |
+  | Battery voltage | ES terminals | Monitor charge state |
+  | Turbo speed | Turbocharger shaft | Monitor TC RPM |
+  | Oil consumption | Oil tank | Monitor oil usage rate |
+  | Ride height (4x) | Front/rear corners | Monitor ground clearance |
+  | Wheel speed (4x) | Each wheel | Speed and slip monitoring |
+  | Throttle position | Throttle body | Driver input monitoring |
+  | Brake pressure (2x) | Front/rear circuits | Brake system monitoring |
+</Accordion>
+
+<Info>
+**Sensor Calibration:**
+All FIA sensors are calibrated before events by FIA technical staff. Teams cannot modify calibration.
+</Info>
+
+### Team Sensors
+
+Teams may install additional sensors for performance monitoring:
+
+<CardGroup cols={3}>
+  <Card title="Temperature" icon="temperature-half">
+    Coolant, oil, brake, tire, ambient sensors
+  </Card>
+  <Card title="Pressure" icon="gauge">
+    Brake hydraulics, pneumatics, tire pressure
+  </Card>
+  <Card title="Position" icon="location-dot">
+    Suspension travel, steering angle, pedal positions
+  </Card>
+  <Card title="Acceleration" icon="gauge-high">
+    G-force sensors (longitudinal, lateral, vertical)
+  </Card>
+  <Card title="Aerodynamic" icon="wind">
+    Pitot tubes, pressure taps for aero mapping
+  </Card>
+  <Card title="Strain Gauges" icon="scale-balanced">
+    Structural loads on suspension, wings, chassis
+  </Card>
+</CardGroup>
+
+<Note>
+Teams typically run 200-300 sensors total for comprehensive car monitoring and performance optimization.
+</Note>
+
+## Data Acquisition and Logging
+
+### On-Car Data Logging
+
+<Info>
+**Dual Data Systems:**
+1. **FIA Standard Logger:** Records all mandated parameters, accessible to FIA
+2. **Team Logger:** Records team-specific data for performance analysis
+</Info>
+
+### Data Recording Rates
+
+| Parameter Type | Sampling Rate | Storage |
+|----------------|---------------|----------|
+| Critical sensors (fuel flow, power) | 2,000 Hz | FIA logger |
+| Power unit parameters | 1,000 Hz | Both loggers |
+| Chassis sensors | 100-500 Hz | Team logger |
+| GPS position | 100 Hz | Both loggers |
+| Tire pressure | 10 Hz | Both loggers |
+| Video feeds | 30 fps | Team system |
+
+<Accordion title="Data Storage and Retention">
+  **FIA Standard Logger:**
+  - Crash-protected memory module
+  - Minimum 4-hour recording capacity
+  - Data retained for 72 hours after event
+  - FIA can extract data at any time
+  - Teams have access to their own FIA logger data
+  
+  **Team Data Logger:**
+  - Extended storage for full weekend
+  - Detailed analysis at team factory
+  - Must be made available to FIA upon request
+</Accordion>
+
+## Accident Data Recorder (ADR)
+
+<Warning>
+**Mandatory Safety Device:**
+The Accident Data Recorder is a crash-protected memory unit that records critical data during accidents.
+</Warning>
+
+### ADR Specifications
+
+<Steps>
+  <Step title="Crash Protection">
+    Survives impacts up to 500G and temperatures up to 1,100°C
+  </Step>
+  <Step title="Critical Data">
+    Records G-forces, speed, power unit status, driver inputs
+  </Step>
+  <Step title="High-Speed Recording">
+    Captures data at 1,000 Hz during and after impact
+  </Step>
+  <Step title="FIA Extraction">
+    FIA extracts data after significant accidents for investigation
+  </Step>
+</Steps>
+
+<Info>
+ADR data helps FIA improve safety by understanding forces and circumstances in accidents. It's also used to calibrate crash tests.
+</Info>
+
+## Telemetry Systems
+
+### Real-Time Telemetry
+
+<CardGroup cols={2}>
+  <Card title="Car-to-Pit" icon="tower-broadcast">
+    Real-time wireless data transmission from car to team garage
+  </Card>
+  <Card title="FIA Monitoring" icon="satellite">
+    Simultaneous transmission to FIA for compliance monitoring
+  </Card>
+  <Card title="Bandwidth" icon="signal">
+    High-bandwidth digital radio system
+  </Card>
+  <Card title="Security" icon="lock">
+    Encrypted channels prevent interception by competitors
+  </Card>
+</CardGroup>
+
+### Telemetry Regulations
+
+<Warning>
+**Two-Way Communication Restrictions:**
+- Telemetry is one-way from car to pit during race
+- Teams cannot send setup changes or driver instructions electronically
+- Only permitted: Display messages, pit stop data, flag warnings
+- Prohibited: Steering input, throttle/brake aids, shift point indicators
+</Warning>
+
+<Accordion title="Permitted Pit-to-Car Messages">
+  **Allowed Messages to Driver During Race:**
+  - Safety information (flags, accidents ahead)
+  - Lap time and position information
+  - Pit stop window and tire strategy
+  - Gap to cars ahead/behind
+  - Technical issue warnings
+  - Mandatory instructions (FIA penalties, black flag)
+  
+  **Prohibited:**
+  - Driving technique coaching
+  - Detailed car setup advice during session
+  - Shift point recommendations
+  - Brake point guidance
+</Accordion>
+
+## Steering Wheel and Driver Controls
+
+### Steering Wheel Display
+
+<Info>
+**FIA Standard Display:**
+All teams use FIA-standard display unit on steering wheel:
+- 4.3-inch LCD color screen
+- Customizable display layouts (within regulations)
+- Shows: RPM, gear, speed, lap time, flags, warnings
+- Teams can design display pages but cannot add driver aids
+</Info>
+
+### Driver Controls
+
+<CardGroup cols={2}>
+  <Card title="Rotary Switches" icon="rotate">
+    Multiple rotary dials for engine modes, brake balance, differential settings
+  </Card>
+  <Card title="Toggle Switches" icon="toggle-on">
+    Switches for systems like DRS, radio, pit limiter, drink system
+  </Card>
+  <Card title="Push Buttons" icon="circle">
+    Buttons for functions like overtake mode, neutral, radio transmit
+  </Card>
+  <Card title="Paddles" icon="hand">
+    Gear shift paddles (up/down) and clutch paddles (race start)
+  </Card>
+</CardGroup>
+
+<Note>
+Modern F1 steering wheels have 20-30 switches and controls, allowing drivers to adjust car behavior on the fly within regulatory constraints.
+</Note>
+
+### Permitted Adjustments
+
+<Accordion title="Driver-Adjustable Settings">
+  **Allowed During Running:**
+  - Engine mode (power/fuel saving/qualifying modes)
+  - Hybrid deployment strategy
+  - Brake balance (front/rear distribution)
+  - MGU-K regeneration level
+  - Differential entry/mid/exit settings
+  - Fuel mix (lean/rich)
+  - Active aero mode (X-Mode/Z-Mode activation)
+  
+  **Prohibited:**
+  - Active suspension adjustments (no active suspension allowed)
+  - Traction control settings (prohibited)
+  - ABS settings (prohibited)
+  - Automatic optimal shift points (must be manual)
+</Accordion>
+
+## CAN Bus Architecture
+
+### Network Structure
+
+<Steps>
+  <Step title="High-Speed CAN">
+    Power unit sensors and actuators (1 Mbit/s)
+  </Step>
+  <Step title="Chassis CAN">
+    Chassis sensors and driver controls (1 Mbit/s)
+  </Step>
+  <Step title="FIA CAN">
+    FIA-mandated sensors to FIA logger (1 Mbit/s)
+  </Step>
+  <Step title="Telemetry Network">
+    High-bandwidth network for telemetry transmission
+  </Step>
+</Steps>
+
+<Note>
+CAN (Controller Area Network) is the standard automotive communication protocol used throughout F1 cars.
+</Note>
+
+## GPS and Timing Systems
+
+### FIA GPS Transponder
+
+<Info>
+**Mandatory GPS Unit:**
+- FIA-spec GPS transponder on each car
+- Provides real-time position to timing system
+- 100 Hz update rate for precise positioning
+- Used for tracking, timing, and enforcement (track limits)
+- Cannot be removed or modified by teams
+</Info>
+
+### Timing Detection
+
+<CardGroup cols={2}>
+  <Card title="GPS Positioning" icon="satellite">
+    Primary timing method using GPS coordinates
+  </Card>
+  <Card title="Transponder Loops" icon="circle-dot">
+    Backup timing loops embedded in track
+  </Card>
+  <Card title="Video Analysis" icon="video">
+    FIA cameras for corner-by-corner timing
+  </Card>
+  <Card title="Track Limits" icon="map">
+    GPS monitors track limits violations
+  </Card>
+</CardGroup>
+
+## Electronic Safety Systems
+
+### Critical Safety Functions
+
+<Steps>
+  <Step title="Impact Detection">
+    Accelerometers detect crash impacts
+  </Step>
+  <Step title="Automatic Shutdown">
+    Power unit and electrical systems shut down
+  </Step>
+  <Step title="Battery Isolation">
+    High-voltage battery disconnected automatically
+  </Step>
+  <Step title="Fire Suppression">
+    Onboard fire extinguisher activated
+  </Step>
+  <Step title="Marshals Alert">
+    Accident data transmitted to race control
+  </Step>
+</Steps>
+
+<Warning>
+**Biometric Monitoring (New for 2026):**
+Drivers wear biometric sensors monitoring heart rate and other vital signs. Data transmitted to FIA medical team for immediate assessment after accidents.
+</Warning>
+
+### Fire Detection and Suppression
+
+<Accordion title="Electronic Fire Safety">
+  **Detection:**
+  - Temperature sensors in engine bay and fuel cell area
+  - Optical flame detectors
+  - Rapid response (&lt;100 milliseconds detection time)
+  
+  **Automatic Response:**
+  - Fuel pumps shut off
+  - Battery high-voltage disconnect
+  - Fire extinguisher activation
+  - Warning to driver on display
+  
+  **Manual Activation:**
+  - Driver can manually trigger extinguisher
+  - Marshals can activate external extinguisher system
+</Accordion>
+
+## Power Unit Electronics Integration
+
+### 2026 Power Unit Control
+
+<Info>
+**Enhanced Electrical Control:**
+The 2026 power unit with 350kW MGU-K requires sophisticated electronics:
+- Real-time torque vectoring between ICE and MGU-K
+- Seamless torque fill during gear shifts
+- Turbo lag mitigation via MGU-K boost
+- Energy management for optimal lap performance
+</Info>
+
+### Hybrid Strategy Control
+
+<CardGroup cols={2}>
+  <Card title="Harvesting" icon="recycle">
+    Maximum 8.5 MJ energy recovery per lap under braking
+  </Card>
+  <Card title="Deployment" icon="bolt">
+    Unlimited electrical energy deployment per lap
+  </Card>
+  <Card title="SOC Management" icon="battery-half">
+    Battery state-of-charge optimization for race strategy
+  </Card>
+  <Card title="Torque Blending" icon="arrows-split-up-and-left">
+    Seamless blending of ICE and MGU-K torque delivery
+  </Card>
+</CardGroup>
+
+## Camera Systems
+
+### Mandatory FIA Cameras
+
+<Info>
+**Broadcast Cameras:**
+Each car carries multiple FIA-mandated cameras:
+- 1x forward-facing HD camera (driver's view)
+- 1x rear-facing camera (behind driver)
+- 1x 360° camera on roll hoop
+- All cameras standardized, cannot be modified
+- Weight approximately 3-4kg per car
+</Info>
+
+<Warning>
+Camera housings are exempt from certain bodywork dimension limits but must not provide aerodynamic advantage.
+</Warning>
+
+### Team Cameras
+
+Teams may install additional cameras:
+- Aerodynamic flow visualization
+- Tire behavior monitoring
+- Suspension movement analysis
+- Driver technique review
+
+## Radio Communication
+
+### Team Radio
+
+<CardGroup cols={2}>
+  <Card title="Digital Encrypted" icon="shield">
+    Secure digital radio prevents eavesdropping
+  </Card>
+  <Card title="Driver-Initiated" icon="microphone">
+    Driver can call team via steering wheel button
+  </Card>
+  <Card title="Team-to-Driver" icon="headset">
+    Race engineer can call driver
+  </Card>
+  <Card title="FIA Monitoring" icon="ear-listen">
+    All team radio monitored and recorded by FIA
+  </Card>
+</CardGroup>
+
+<Accordion title="Team Radio Restrictions">
+  **Permitted Communications:**
+  - Safety warnings
+  - Position and timing information
+  - Pit stop coordination
+  - Technical issue reporting
+  - Tire and fuel information
+  
+  **Restricted Communications:**
+  - Coaching on driving technique during race
+  - Detailed setup advice mid-session
+  - Information that could be considered driver aid
+  
+  **Penalties:**
+  - Violations of radio rules can result in time penalties
+  - FIA stewards review radio transcripts after each session
+</Accordion>
+
+## Electronic Component Reliability
+
+### Harsh Operating Environment
+
+<Note>
+**Extreme Conditions:**
+F1 electronics must survive:
+- Vibration: Up to 30G sustained, 80G peak
+- Temperature: -10°C to +125°C operating range
+- Electromagnetic interference: High-power electrical systems
+- Moisture: Rain racing conditions
+- Mechanical shock: Curb impacts, crashes
+</Note>
+
+### Redundancy and Fail-Safes
+
+<Steps>
+  <Step title="Dual Processors">
+    ECU has redundant processor cores
+  </Step>
+  <Step title="Critical Sensor Redundancy">
+    Important sensors have backup units
+  </Step>
+  <Step title="Fail-Safe Modes">
+    Car enters safe mode if critical systems fail
+  </Step>
+  <Step title="Limp-Home Mode">
+    Degraded operation allows car to return to pits
+  </Step>
+</Steps>
+
+## Electrical System Architecture
+
+### Power Distribution
+
+<Info>
+**Dual Voltage System:**
+- **High Voltage (1,000V DC):** Battery, MGU-K, power electronics
+- **Low Voltage (12V):** Sensors, ECU, telemetry, driver controls, fuel pumps
+</Info>
+
+<Warning>
+**High-Voltage Safety:**
+- Orange cables and connectors indicate high-voltage
+- Automatic disconnect in case of impact
+- Insulated from chassis (ground)
+- Marshals trained in high-voltage safety procedures
+</Warning>
+
+### Wiring and Connectors
+
+<CardGroup cols={2}>
+  <Card title="Wiring Harness" icon="plug">
+    Custom harnesses with hundreds of connections, minimum 3-5kg weight
+  </Card>
+  <Card title="Weatherproof" icon="cloud-rain">
+    All connectors sealed against moisture ingress
+  </Card>
+  <Card title="Vibration-Proof" icon="wave-square">
+    Locking connectors prevent vibration disconnection
+  </Card>
+  <Card title="Serviceability" icon="wrench">
+    Quick-disconnect design for rapid repairs
+  </Card>
+</CardGroup>
+
+## Prohibited Electronic Systems
+
+<Warning>
+**Explicitly Banned Technologies:**
+
+- **Traction Control:** Any system that modulates power/braking to control wheel slip
+- **Launch Control:** Automated systems to optimize race starts
+- **Active Suspension:** Computer-controlled suspension adjustments
+- **ABS (Anti-lock Braking):** Brake pressure modulation to prevent lock-up
+- **CVT:** Continuously variable transmission (gearbox must have fixed ratios)
+- **Automatic Shifting:** Gearbox must require manual driver paddle input
+- **Brake Steering:** Systems that apply individual rear brakes for cornering
+- **Electronic Differential:** Computer-controlled differential (mechanical only)
+- **Moveable Aerodynamics (except active aero):** Computer-controlled bodywork adjustments
+- **Four-Wheel Drive:** Power delivery to front axle prohibited
+</Warning>
+
+## Future Technology
+
+### 2026 Electronic Developments
+
+<Info>
+**Evolving Technologies:**
+- Advanced battery thermal management systems
+- More sophisticated hybrid deployment algorithms
+- Enhanced biometric monitoring for driver safety
+- Improved data compression for telemetry bandwidth
+- AI-assisted (but not autonomous) systems within strict regulatory limits
+</Info>
+
+## Related Topics
+
+<CardGroup cols={2}>
+  <Card title="Power Unit" icon="engine" href="/technical/power-unit">
+    Power unit control electronics and sensor integration
+  </Card>
+  <Card title="Safety" icon="shield" href="/technical/safety">
+    Electronic safety systems and crash detection
+  </Card>
+  <Card title="Fuel Systems" icon="gas-pump" href="/technical/fuel-systems">
+    Fuel flow sensors and monitoring systems
+  </Card>
+</CardGroup>

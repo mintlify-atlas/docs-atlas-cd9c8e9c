@@ -1,0 +1,607 @@
+---
+title: "Power Unit"
+description: "Complete technical specifications for the revolutionary 2026 Formula 1 power unit with 50/50 hybrid split"
+---
+
+# Power Unit
+
+The 2026 power unit regulations represent the most significant change in Formula 1's hybrid era, introducing a 50/50 power split between internal combustion engine (ICE) and electrical systems, mandatory 100% sustainable fuels, and the removal of the MGU-H.
+
+## Revolutionary 2026 Power Unit
+
+<CardGroup cols={2}>
+  <Card title="50/50 Power Split" icon="bolt">
+    **350kW ICE + 350kW Electrical** = Equal contribution from combustion and hybrid systems
+  </Card>
+  <Card title="No MGU-H" icon="circle-xmark">
+    MGU-H removed for cost reduction and simplified architecture
+  </Card>
+  <Card title="Tripled E-Power" icon="battery-full">
+    MGU-K output increased from 120kW to **350kW**
+  </Card>
+  <Card title="Sustainable Fuel" icon="leaf">
+    100% sustainable fuel mandatory - zero net carbon footprint
+  </Card>
+</CardGroup>
+
+<Info>
+**Total Power Output:** Approximately **700kW (950 horsepower)** combined from ICE and electrical systems
+</Info>
+
+## Power Unit Architecture
+
+### Component Overview
+
+The 2026 power unit consists of:
+
+<Steps>
+  <Step title="ICE - Internal Combustion Engine">
+    1.6L V6 turbocharged engine with advanced combustion efficiency
+  </Step>
+  <Step title="TC - Turbocharger">
+    Single turbocharger with enhanced efficiency and no energy recovery
+  </Step>
+  <Step title="MGU-K - Motor Generator Unit (Kinetic)">
+    350kW electrical motor on crankshaft for energy recovery and deployment
+  </Step>
+  <Step title="ES - Energy Store (Battery)">
+    Increased capacity battery system for electrical energy storage
+  </Step>
+  <Step title="CE - Control Electronics">
+    FIA-standardized control unit managing power unit systems
+  </Step>
+</Steps>
+
+## Internal Combustion Engine (ICE)
+
+### Engine Specifications
+
+| Parameter | Specification |
+|-----------|---------------|
+| Configuration | 90° V6 |
+| Capacity | 1,600cc (±0.1cc tolerance) |
+| Cylinders | 6 (2 banks of 3) |
+| Bank angle | 90° |
+| Bore | 80mm (±0.1mm tolerance) |
+| Stroke | 53mm |
+| Maximum RPM | 10,500 rpm |
+| Fuel flow limit | 100 kg/hour |
+| Oil flow limit | Maximum controlled by FIA sensor |
+
+<Warning>
+**Critical Change:** Rev limit reduced from 15,000 rpm to **10,500 rpm** for durability and cost control
+</Warning>
+
+### Combustion System
+
+#### Fuel Injection
+
+<Accordion title="Injection System Specifications">
+  **Direct Injection Requirements:**
+  - Single fuel injector per cylinder
+  - Maximum injection pressure: 500 bar
+  - Injector location: Within defined volume in combustion chamber
+  - Port fuel injection: Prohibited
+  - Fuel rail pressure: Monitored by FIA sensor
+  
+  **Injection Strategy:**
+  - Multiple injections per cycle permitted
+  - Pre-chamber ignition: Prohibited
+  - Maximum 1 spark plug per cylinder
+</Accordion>
+
+#### Ignition System
+
+- **Spark plugs**: 1 per cylinder
+- **Ignition timing**: Controlled by CE (Control Electronics)
+- **Coil-on-plug**: Mandatory configuration
+- **Multiple spark**: Prohibited during combustion phase
+
+### Engine Block and Internals
+
+<CardGroup cols={2}>
+  <Card title="Crankshaft" icon="gear">
+    Single-plane crankshaft, maximum 1 per engine allocation
+  </Card>
+  <Card title="Valvetrain" icon="arrows-rotate">
+    4 valves per cylinder, pneumatic or mechanical valve springs
+  </Card>
+  <Card title="Pistons" icon="circle">
+    Aluminum alloy, no exotic coatings, maximum 2 sets per engine
+  </Card>
+  <Card title="Connecting Rods" icon="link">
+    Steel or titanium, maximum 2 sets per engine allocation
+  </Card>
+</CardGroup>
+
+### Materials
+
+<Note>
+**Permitted Materials:**
+- Engine block: Aluminum alloy or cast iron
+- Crankshaft: Steel alloy
+- Camshafts: Steel or cast iron
+- Valves: Titanium, steel, or nickel alloys
+- Cylinder head: Aluminum alloy
+
+**Prohibited Materials:**
+- Beryllium and beryllium alloys
+- Metal matrix composites (MMC) in specific components
+- Ceramic components (except coatings)
+</Note>
+
+## Turbocharger
+
+### Turbocharger Specifications
+
+<Info>
+**Major Change:** No MGU-H means turbocharger operates conventionally without energy recovery
+</Info>
+
+| Component | Specification |
+|-----------|---------------|
+| Quantity | Single turbocharger |
+| Maximum shaft speed | 125,000 rpm |
+| Compressor | Radial compressor, max diameter 95mm |
+| Turbine | Radial turbine, max diameter 90mm |
+| Wastegate | Mandatory for boost control |
+| Intercooler | Air-to-air or air-to-water permitted |
+
+### Boost Control
+
+<Steps>
+  <Step title="Wastegate">
+    Single wastegate valve controlling exhaust bypass
+  </Step>
+  <Step title="Maximum Pressure">
+    Absolute intake pressure limited (monitored by FIA sensor)
+  </Step>
+  <Step title="Anti-Lag Prohibited">
+    No ignition retardation or fuel-based anti-lag systems
+  </Step>
+</Steps>
+
+<Warning>
+Without MGU-H, teams must manage turbo lag through aerodynamic drag reduction and MGU-K deployment strategies.
+</Warning>
+
+## MGU-K (Motor Generator Unit - Kinetic)
+
+### MGU-K Specifications (2026)
+
+<CardGroup cols={2}>
+  <Card title="Maximum Power" icon="bolt">
+    **350kW** (up from 120kW in 2025)
+  </Card>
+  <Card title="Unlimited Deployment" icon="infinity">
+    No lap energy deployment limit
+  </Card>
+  <Card title="Speed Range" icon="gauge-high">
+    Operational from low RPM to maximum engine speed
+  </Card>
+  <Card title="Torque Delivery" icon="arrows-rotate">
+    Seamless torque fill for turbo lag mitigation
+  </Card>
+</CardGroup>
+
+### Energy Recovery
+
+<Info>
+**Brake Energy Recovery:**
+- Maximum recovery: **8.5 MJ per lap** (increased from 4 MJ)
+- Recovery during braking and coasting
+- Rear axle only (no front axle recovery)
+</Info>
+
+### MGU-K Integration
+
+- **Mounting**: Directly on crankshaft between ICE and gearbox
+- **Cooling**: Liquid cooling integrated with power unit system
+- **Weight**: Minimum weight component (contributes to PU minimum)
+- **Reliability**: Must last multiple events (allocation limits)
+
+## Energy Store (Battery)
+
+### Battery Specifications
+
+| Parameter | Specification |
+|-----------|---------------|
+| Type | Lithium-ion cells |
+| Maximum capacity | 8.5 MJ (increased from 4 MJ) |
+| Maximum voltage | 1,000V DC |
+| Maximum current | Monitored by FIA sensor |
+| Weight | Minimum 35kg |
+| Cooling | Liquid cooling mandatory |
+
+<Note>
+**Battery Chemistry:** 
+Standardized cell specifications for cost control and safety:
+- Cell type: High energy density lithium-ion
+- Cell format: Cylindrical or pouch cells
+- Battery Management System (BMS): Integrated with CE
+</Note>
+
+### Battery Management
+
+<Accordion title="BMS Functions">
+  **The Battery Management System controls:**
+  - Cell voltage balancing
+  - Temperature monitoring and thermal management
+  - State of charge (SOC) calculation
+  - Power limits to prevent cell damage
+  - Safety disconnect in case of fault
+  - Communication with Control Electronics (CE)
+</Accordion>
+
+<Warning>
+**Safety Critical:**
+Battery must automatically disconnect in case of:
+- Crash impact detection
+- Over-temperature condition (>60°C cell temp)
+- Over-voltage or under-voltage condition
+- Loss of communication with CE
+</Warning>
+
+## Control Electronics (CE)
+
+### Standardized Components
+
+<CardGroup cols={2}>
+  <Card title="ECU" icon="microchip">
+    FIA-standard Electronic Control Unit (McLaren Electronic Systems)
+  </Card>
+  <Card title="Software" icon="code">
+    Standardized base software with limited team calibration
+  </Card>
+  <Card title="Sensors" icon="sensor">
+    FIA-mandated sensors for monitoring and compliance
+  </Card>
+  <Card title="Data Logging" icon="database">
+    All power unit data logged to FIA-accessible system
+  </Card>
+</CardGroup>
+
+### Control Functions
+
+<Steps>
+  <Step title="ICE Control">
+    Fuel injection timing and duration, ignition timing, throttle control
+  </Step>
+  <Step title="MGU-K Control">
+    Torque request, regeneration control, power deployment strategy
+  </Step>
+  <Step title="Monitoring">
+    Real-time monitoring of fuel flow, power output, temperatures, pressures
+  </Step>
+  <Step title="Compliance">
+    Enforces regulatory limits (fuel flow, power limits, energy deployment)
+  </Step>
+</Steps>
+
+## Fuel Specifications
+
+### 100% Sustainable Fuel (2026)
+
+<Info>
+**Revolutionary Change:**
+All fuel must be 100% sustainable with zero net carbon footprint
+- Advanced biofuels from biomass
+- Synthetic e-fuels from captured CO₂ and renewable energy
+- Drop-in compatibility with ICE (no engine modifications required)
+</Info>
+
+### Fuel Properties
+
+| Property | Specification |
+|----------|---------------|
+| RON (Research Octane Number) | Minimum 95 |
+| Density (15°C) | 720-785 kg/m³ |
+| Bio-content | 100% |
+| Aromatics | Maximum 35% by volume |
+| Oxygen content | Maximum 5% by mass |
+| Sulfur | Maximum 10 mg/kg |
+
+<Accordion title="Fuel Composition Analysis">
+  **FIA Testing:**
+  - All fuels must be submitted for FIA approval
+  - Chemical composition analysis conducted
+  - Reference fuel sample retained by FIA
+  - Random testing during events to ensure compliance
+  - Infrared spectroscopy used for rapid checks
+  - Non-compliant fuel results in disqualification
+</Accordion>
+
+### Fuel Flow Limits
+
+<Warning>
+**Maximum fuel flow: 100 kg/hour**
+- Monitored by FIA fuel flow sensor
+- Measured at a rate of 2,000 times per second
+- Instantaneous flow must not exceed limit
+- Violations result in penalties or disqualification
+</Warning>
+
+## Exhaust System
+
+### Exhaust Specifications
+
+- **Configuration**: 6 individual runners merging to single tailpipe
+- **Diameter**: Maximum tailpipe diameter 120mm
+- **Length**: Minimum length from turbine outlet
+- **Material**: Typically Inconel for heat resistance
+- **Exits**: Single exit, centered in rear crash structure
+
+### Exhaust Regulations
+
+<Note>
+**Prohibited:**
+- Exhaust-blown aerodynamics
+- Variable geometry exhaust
+- Ignition retardation for exhaust energy
+- Secondary air injection
+- Exhausts directed at aerodynamic surfaces
+</Note>
+
+## Lubrication System
+
+### Oil Specifications
+
+<Accordion title="Lubricant Requirements">
+  **Engine Oil:**
+  - Viscosity grade: Typically 0W-30 or 0W-40
+  - Base oil: Synthetic
+  - Oil consumption: Monitored by FIA sensor
+  - Maximum oil tank capacity: 8 liters
+  
+  **Prohibited:**
+  - Exotic additives that enhance combustion
+  - Nanoparticle additives
+  - Oil as fuel (strict consumption limits)
+</Accordion>
+
+### Oil Flow Monitoring
+
+<Warning>
+Oil consumption is strictly monitored:
+- Maximum consumption rate enforced
+- Violations indicate illegal combustion enhancement
+- Random oil samples taken for analysis
+</Warning>
+
+## Cooling Systems
+
+### Power Unit Cooling
+
+<CardGroup cols={3}>
+  <Card title="Water Cooling" icon="droplet">
+    ICE cylinder heads, block, and MGU-K
+  </Card>
+  <Card title="Oil Cooling" icon="oil-can">
+    Separate oil coolers for engine and gearbox
+  </Card>
+  <Card title="Battery Cooling" icon="battery-three-quarters">
+    Liquid cooling system for energy store
+  </Card>
+  <Card title="Intercooler" icon="wind">
+    Charge air cooling after turbocharger
+  </Card>
+  <Card title="Radiators" icon="grid">
+    Located in sidepods with optimized airflow
+  </Card>
+  <Card title="Temperature Control" icon="temperature-half">
+    Electronic thermostats for optimal temps
+  </Card>
+</CardGroup>
+
+## Power Unit Allocation
+
+### Component Limits per Season
+
+<Info>
+**2026 Allocation:**
+Each driver is limited to the following power unit components per season:
+</Info>
+
+| Component | Allocation | Penalty for Exceeding |
+|-----------|------------|------------------------|
+| ICE (Internal Combustion Engine) | 3 | Grid penalty (10/5 places) |
+| TC (Turbocharger) | 3 | Grid penalty (10/5 places) |
+| MGU-K | 3 | Grid penalty (10/5 places) |
+| ES (Energy Store) | 2 | Grid penalty (10/5 places) |
+| CE (Control Electronics) | 2 | Grid penalty (10/5 places) |
+| Gearbox | 4 | Grid penalty (5 places) |
+
+<Warning>
+**Grid Penalties:**
+- First additional element of each type: 10-place grid penalty
+- Subsequent additional elements: 5-place grid penalty
+- Multiple penalties may result in back-of-grid start
+</Warning>
+
+## Power Unit Installation
+
+### Mounting Requirements
+
+<Steps>
+  <Step title="Stressed Member">
+    Power unit must be stressed member - load-bearing structure of chassis
+  </Step>
+  <Step title="Mounting Points">
+    Minimum 4 mounting points to chassis (front) and gearbox (rear)
+  </Step>
+  <Step title="FIA Sealing">
+    All critical components sealed by FIA to prevent modifications
+  </Step>
+  <Step title="Accessibility">
+    Must allow FIA technical delegate access for inspection
+  </Step>
+</Steps>
+
+### Weight Distribution
+
+<Note>
+**Power Unit Minimum Weight:**
+Complete power unit (ICE + TC + MGU-K + ES + CE + exhaust + cooling + auxiliaries) has a minimum weight target of approximately **150kg** to prevent excessive lightweighting.
+</Note>
+
+## Dyno Testing and Homologation
+
+### Homologation Process
+
+<Steps>
+  <Step title="Design Submission">
+    Complete CAD data and specifications submitted 12 months before first event
+  </Step>
+  <Step title="FIA Review">
+    Technical review of all components for compliance
+  </Step>
+  <Step title="Dyno Testing">
+    Power unit tested on FIA dyno facility:
+    - Power output verification
+    - Fuel flow compliance
+    - Energy recovery testing
+    - Durability testing
+  </Step>
+  <Step title="Homologation Certificate">
+    Upon passing all tests, power unit receives homologation certificate
+  </Step>
+</Steps>
+
+<Warning>
+Once homologated, power unit designs are largely frozen. Only specific reliability or cost-saving modifications permitted.
+</Warning>
+
+## Power Unit Development
+
+### Development Restrictions
+
+<Info>
+**Design Freeze:**
+- Major power unit components frozen at homologation
+- Limited development tokens for changes
+- Reliability improvements permitted with FIA approval
+- Performance upgrades heavily restricted
+</Info>
+
+### Allowed Modifications
+
+<Accordion title="Permitted Changes During Season">
+  **Reliability Modifications:**
+  - Changes to address component failures
+  - Material upgrades for durability (no performance gain)
+  - Geometry changes to prevent failures
+  
+  **Cost-Saving Changes:**
+  - Manufacturing process improvements
+  - Material substitutions (equal or lower cost)
+  
+  **Prohibited:**
+  - Performance-driven changes
+  - Combustion system modifications
+  - Changes solely for power increase
+</Accordion>
+
+## Power Unit Manufacturers (2026)
+
+The following manufacturers supply power units in 2026:
+
+<CardGroup cols={2}>
+  <Card title="Ferrari" icon="engine">
+    Ferrari + Haas customer team
+  </Card>
+  <Card title="Mercedes" icon="engine">
+    Mercedes (works team)
+  </Card>
+  <Card title="Honda" icon="engine">
+    Aston Martin (works partnership)
+  </Card>
+  <Card title="Red Bull Powertrains" icon="engine">
+    Red Bull Racing + VCARB teams
+  </Card>
+  <Card title="Alpine/Renault" icon="engine">
+    Alpine (works team)
+  </Card>
+  <Card title="Audi" icon="engine">
+    Sauber (works team - joining 2026)
+  </Card>
+</CardGroup>
+
+## Performance Monitoring
+
+### FIA Sensors
+
+Mandatory sensors monitor power unit performance:
+
+| Sensor | Location | Purpose |
+|--------|----------|----------|
+| Fuel flow meter | Fuel supply line | Enforce fuel flow limit |
+| Fuel pressure | Fuel rail | Monitor injection system |
+| MGU-K torque | MGU-K shaft | Monitor electrical power |
+| Battery current/voltage | ES terminals | Monitor energy deployment |
+| Turbo speed | TC shaft | Monitor turbocharger RPM |
+| Oil consumption | Oil tank | Monitor oil usage |
+
+<Warning>
+All sensor data transmitted to FIA in real-time. Any anomalies trigger immediate investigation.
+</Warning>
+
+## Driver Controls
+
+### Permitted Driver Adjustments
+
+<CardGroup cols={2}>
+  <Card title="Energy Deployment" icon="battery-bolt">
+    Drivers can adjust MGU-K deployment modes
+  </Card>
+  <Card title="Engine Mapping" icon="sliders">
+    Selection between predetermined engine maps
+  </Card>
+  <Card title="Brake Balance" icon="scale-balanced">
+    Adjust front/rear brake balance and MGU-K regen
+  </Card>
+  <Card title="Fuel Mix" icon="gas-pump">
+    Lean/rich mixture modes for fuel saving
+  </Card>
+</CardGroup>
+
+<Note>
+All driver adjustments must be made via controls on steering wheel. No automatic systems permitted.
+</Note>
+
+## Sustainability Impact
+
+### Carbon Footprint
+
+<Info>
+**2026 Goals:**
+- 100% sustainable fuel: Zero net carbon from fuel combustion
+- Reduced fuel consumption: Higher electrical power contribution
+- Recyclable battery materials: Lithium and cobalt recovery programs
+- Simplified architecture: Fewer exotic materials, easier recycling
+</Info>
+
+### Road Relevance
+
+<Accordion title="Technology Transfer">
+  **Automotive Industry Applications:**
+  - Sustainable fuel development accelerates commercial adoption
+  - High-efficiency combustion technology applicable to road cars
+  - Battery technology and energy management strategies
+  - Turbocharger efficiency improvements for production engines
+  
+  Formula 1's technology roadmap aligns with global automotive electrification and decarbonization goals.
+</Accordion>
+
+## Related Topics
+
+<CardGroup cols={2}>
+  <Card title="Fuel Systems" icon="gas-pump" href="/technical/fuel-systems">
+    Detailed fuel system specifications and sustainable fuel requirements
+  </Card>
+  <Card title="Electronics" icon="microchip" href="/technical/electronics">
+    Control electronics, sensors, and power unit integration
+  </Card>
+  <Card title="Chassis & Bodywork" icon="car" href="/technical/chassis-bodywork">
+    Power unit installation and integration with chassis
+  </Card>
+</CardGroup>
