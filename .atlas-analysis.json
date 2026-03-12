@@ -1,0 +1,90 @@
+{
+  "projectType": "general",
+  "projectName": "FIA 2026 F1 Regulations",
+  "projectDescription": "Complete reference documentation for the FIA Formula 1 2026 technical, sporting, financial, and operational regulations",
+  "theme": "linden",
+  "primaryColor": "#e10600",
+  "lightColor": "#ff1e00",
+  "darkColor": "#b00500",
+  "navigation": {
+    "groups": [
+      {
+        "group": "Overview",
+        "pages": [
+          "introduction",
+          "whats-new-2026",
+          "understanding-regulations"
+        ]
+      },
+      {
+        "group": "General Provisions",
+        "pages": [
+          "general/overview",
+          "general/definitions",
+          "general/governance"
+        ]
+      },
+      {
+        "group": "Sporting Regulations",
+        "pages": [
+          "sporting/overview",
+          "sporting/championship-events",
+          "sporting/race-procedures",
+          "sporting/penalties-protests"
+        ]
+      },
+      {
+        "group": "Technical Regulations",
+        "pages": [
+          "technical/overview",
+          "technical/chassis-bodywork",
+          "technical/power-unit",
+          "technical/fuel-systems",
+          "technical/electronics",
+          "technical/safety"
+        ]
+      },
+      {
+        "group": "Financial Regulations",
+        "pages": [
+          "financial/overview",
+          "financial/cost-cap-teams",
+          "financial/cost-cap-pu-manufacturers",
+          "financial/reporting-compliance"
+        ]
+      },
+      {
+        "group": "Operational Regulations",
+        "pages": [
+          "operational/overview",
+          "operational/logistics",
+          "operational/media-commercial"
+        ]
+      },
+      {
+        "group": "Reference",
+        "pages": [
+          "reference/quick-reference",
+          "reference/changelog",
+          "reference/faq"
+        ]
+      }
+    ]
+  },
+  "keyFeatures": [
+    "Complete 2026 FIA F1 regulations across all sections",
+    "Technical specifications for chassis, power units, and safety systems",
+    "Sporting rules for championship events and race procedures",
+    "Financial regulations including cost cap for teams and power unit manufacturers",
+    "Operational guidelines for logistics and media",
+    "Updated provisions and governance framework"
+  ],
+  "publicApiSurface": [
+    "Section A: General Provisions (Issue 02, 2026-02-27)",
+    "Section B: Sporting Regulations (Issue 05, 2026-02-27)",
+    "Section C: Technical Regulations (Issue 16, 2026-02-27)",
+    "Section D: Financial Regulations - F1 Teams (Issue 05, 2026-02-27)",
+    "Section E: Financial Regulations - Power Unit Manufacturers (Issue 03, 2025-12-10)",
+    "Section F: Operational Regulations (Issue 06, 2026-02-27)"
+  ]
+}
